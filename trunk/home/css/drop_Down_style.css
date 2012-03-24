@@ -1,0 +1,101 @@
+#Page-wide-vl
+{
+	width:730px;
+	height:236px;
+	border:1px solid #c4c9cb;
+	box-shadow: 0px 0px 6px 0px #C4C9CB;
+	border-bottom:4px solid #006c9a;
+	border-radius:5px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+.head-support-vl
+{ 
+	font-size:11px;
+	line-height:22px;
+}
+.time-support-vl
+{
+	clear:both;
+	border-bottom:1px #cccccc dashed; 
+	border-top:1px #cccccc dashed;
+	font-size:12px;
+	margin-top: 15px;
+}
+.time-support-content-vl
+{
+	width:719px;
+	height:46px;
+	background:#e4efd9;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom:5px;
+}
+.time-support-content-show-vl
+{
+
+	margin-left: 16px;
+	line-height:24px;
+}
+.place-support-vl
+{
+	border-bottom:2px #eeeeee solid; 
+	color:#666666;
+	font-size:12px;
+	margin:16px 15px 0px 21px;
+	line-height:24px;
+	padding-bottom:16px;
+}
+.nick-support-vl
+{
+	color:#006c9a; 
+	font-size:12px;
+	line-height:24px;
+	margin-top: 10px;
+}
+.hotro-left-vl
+{
+	float:left;
+}
+.ho-tro-yahoo-vl
+{
+	background:url(images/allStar.png) -6px -152px no-repeat;
+	padding-left:25px;
+}
+.ho-tro-skype-vl
+{
+	background:url(images/allStar.png) -7px -128px no-repeat;
+	padding-left:25px;
+}
+.ho-tro-phone-vl
+{
+	background:url(images/allStar.png) -7px -106px no-repeat;
+	padding-left:25px;
+}
+.Check-vl
+{
+	
+}
+<!-- Paste this code into the CSS section of your HTML document  -->
+
+#dhtmlgoodies_contentBox-vl {
+  border:1px solid #317082;
+  height:0px;
+  visibility:hidden;
+  position:absolute;
+  background-color:#E2EBED;
+  overflow:hidden;
+  padding:2px;
+  width:250px;
+}
+
+#dhtmlgoodies_content-vl {
+  position:relative;  
+  font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+  width:100%;
+  font-size:0.8em;
+}
+
+#dhtmlgoodies_slidedown-vl {
+  position:relative;
+  width:250px;
+}
