@@ -120,17 +120,33 @@ class Entry extends CActiveRecord
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
 		$criteria=new CDbCriteria;
-
-		//$criteria->compare('id',$this->id,true);
-//		$criteria->compare('url_key',$this->url_key,true);
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('url_key',$this->url_key,true);
 //		$criteria->compare('parent_id',$this->parent_id,true);
+		if(!empty($this->parent_id)){
+			$sql = "select id from entry where title like '%$this->parent_id%'";
+			$connection = Yii::app()->db;
+			$command = $connection->createCommand($sql);
+			$results = $command ->queryAll();
+			if(empty($results)) $ids = -1;
+			else {
+				$ids = '';
+				foreach($results as $result ){
+					$ids .= $result['id'].',';
+				}
+				$ids = substr($ids,0,-1);
+			}
+			$criteria->addCondition("parent_id in ($ids)");
+		}
+
 		$criteria->compare('title',$this->title,true);
-		//$criteria->compare('content',$this->content,true);
-//		$criteria->compare('active',$this->active);
-//		$criteria->compare('default_home',$this->default_home);
-//		$criteria->compare('created_time',$this->created_time,true);
-//		$criteria->compare('index',$this->index);
-//		$criteria->compare('last_updated_time',$this->last_updated_time,true);
+		$criteria->compare('content',$this->content,true);
+		$criteria->compare('active',$this->active);
+		$criteria->compare('default_home',$this->default_home);
+		$criteria->compare('created_time',$this->created_time,true);
+		$criteria->compare('index',$this->index);
+		$criteria->compare('last_updated_time',$this->last_updated_time,true);
+		$criteria->order = 'parent_id asc, `index` asc, `id` asc';
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -142,7 +158,6 @@ class Entry extends CActiveRecord
 
 	function fetchAllAsTree()
 	{
-			#$rows = $this->query($this->getDbCriteria(), true);
 			$cmd = $this->getDbConnection()->createCommand(sprintf("SELECT * FROM `%s`;", $this->tableName()));
 			$rows = $cmd->queryAll();
 			$cats = array();
