@@ -5,8 +5,6 @@
 		$this->breadcrumbs[$p->title] = array('index','url_key'=>$p->url_key);
 		$p = $p->parent;
 	}
-
-
 	$breadcrubs = array_reverse($this->breadcrumbs);
 	$breadcrubs[] = $entry->title;
 	$this->breadcrumbs   = $breadcrubs;

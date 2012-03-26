@@ -39,3 +39,6 @@ div.form .row {
 	padding:0px 2% 10px;
 	float:left;
 }
+.breadcrumbs_admin .breadcrumbs a{
+	float:none;
+}

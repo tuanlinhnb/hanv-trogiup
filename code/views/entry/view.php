@@ -2,7 +2,7 @@
 	$cs = Yii::app()->getClientScript();
 	$cs->registerCssFile('/css/backend.css');
 $this->breadcrumbs=array(
-	'Entries'=>array('index'),
+	'Manage'=>array('admin'),
 	$model->title,
 );
 
@@ -14,7 +14,7 @@ $this->menu=array(
 );
 ?>
 <div class="breadcrumbs_admin"><?php echo $this->renderPartial('_breadcrumbs') ?></div>
-<h3>View Entry #<?php echo $model->id; ?></h3>
+<h3>View Entry "<?php echo $model->title; ?>"</h3>
 <?php
 	 $parent_title = '';
 	 if(!empty($model->parent))
