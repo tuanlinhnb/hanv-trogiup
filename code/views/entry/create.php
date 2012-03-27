@@ -5,7 +5,7 @@
 if ($parentModel)
 	$this->breadcrumbs=array(
 		'Manage'=>array('admin'),
-		$parentModel->name	=>	array('view', 'id'=>$parentModel->id),
+		$parentModel->title	=>	array('view', 'id'=>$parentModel->id),
 		'Create',
 	);
 else
@@ -18,7 +18,7 @@ $this->menu=array(
 	array('label'=>'Manage Entry', 'url'=>array('admin')),
 );
 ?>
-<div class="breadcrumbs_admin"><?php echo $this->renderPartial('_breadcrumbs') ?></div>  
+<div class="breadcrumbs_admin"><?php echo $this->renderPartial('_breadcrumbs') ?></div>
 <h3>Create Entry</h3>
 
 <?php echo $this->renderPartial('_form', array(

@@ -156,6 +156,20 @@ class Entry extends CActiveRecord
 		));
 	}
 
+	function getChildren($count = 1000)
+	{
+		$criteria=new CDbCriteria;
+		if (empty($this->id)) $criteria->addCondition('parent_id IS NULL');
+		else $criteria->compare('parent_id',$this->id);
+		$criteria->order = '`index`';
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination'	=>	array(
+				'pageSize'	=>		$count,
+			),
+		));
+	}
+
 	function fetchAllAsTree()
 	{
 			$cmd = $this->getDbConnection()->createCommand(sprintf("SELECT * FROM `%s`;", $this->tableName()));
