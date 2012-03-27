@@ -53,6 +53,10 @@ $cfg = array(
 			'class'=>'CPhpAuthManager',
 			'defaultRoles'=>array('owner'),
 		),
+		'cache'=>array(
+			'class' => 'CFileCache',
+			'class' => 'CDummyCache',
+		),
 	),
 
 	// application-level parameters that can be accessed

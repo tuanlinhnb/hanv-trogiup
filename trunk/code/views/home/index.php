@@ -10,7 +10,20 @@
 	$this->breadcrumbs   = $breadcrubs;
 ?>
 
-<?php echo $this->renderPartial('_menu_left',array('categories'=>$categories,'entry'=>$entry)) ?>
+<?php
+	if ($this->beginCache('menu_left_'.$entry->id, array(
+	'duration'	=>	24*3600,
+	'dependency'=>	array(
+		'class'	=>	'CDbCacheDependency',
+		'sql'	=>	'SELECT MAX(`last_updated_time`) FROM entry',
+	)
+	))) {
+		echo $this->renderPartial('_menu_left',array('categories'=>$this->categories,'entry'=>$entry));
+		$this->endCache();
+	}
+
+?>
+
 <div class="main-right">
 	<div class="line-link">
 
