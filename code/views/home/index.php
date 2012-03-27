@@ -14,26 +14,26 @@
 <div class="main-right">
 	<div class="line-link">
 
-       	<?php if(isset($this->breadcrumbs)):?>
-     	<?php
+		<?php if(isset($this->breadcrumbs)):?>
+		<?php
 				$this->widget('zii.widgets.CBreadcrumbs', array(
-					'links'=>array_merge(array('Home'=>array('/'),), $this->breadcrumbs),
+					'links'=>array_merge(array('Trang chủ'=>array('home/'),), $this->breadcrumbs),
 					'separator'=>'<span class="separator"></span>',
 					'homeLink'=>false,
 				)); ?>
 		<?php endif?>
 
 	<div>
-     <hr style="color:#006c9a;border: 1px solid;   float: left;  margin: 1px 0">
+	<hr style="color:#006c9a;border: 1px solid;   float: left;  margin: 1px 0">
 	</div>
 
 	</div>
-   <div class="boxLeft">
-   		<div id="LgArticle">
-   			<div class="main-right-home">
+	<div class="boxLeft">
+		<div id="LgArticle">
+			<div class="main-right-home">
 				<?php echo $entry->content; ?>
 			</div>
-   		</div>
-   </div>
+		</div>
+	</div>
 
 </div>
