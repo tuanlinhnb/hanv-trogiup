@@ -2,9 +2,11 @@
 
 class HomeController extends Controller
 {
+	private $_categories;
+
 	function actionIndex()
 	{
-		$categories = Entry::model()->with('entries')->findAllBySql('select * from entry where parent_id is null and active = 1 order by `index` asc, id asc');
+//		$categories = Entry::model()->with('entries')->findAllBySql('select * from entry where parent_id is null and active = 1 order by `index` asc, id asc');
 
 		$url_key = isset($_GET['url_key'])?$_GET['url_key']:null;
 		if(empty($url_key)){
@@ -12,7 +14,7 @@ class HomeController extends Controller
 			if(empty($entryModel)) $entryModel = Entry::model()->findBySql('select * from entry where parent_id is null and active = 1');
 		}
 		else $entryModel = $this->loadEntryModelByUrlKey($url_key);
-		$this->render('index',array('categories' => $categories,'entry'=>$entryModel));
+		$this->render('index',array('entry'=>$entryModel));
 	}
 
 	public function actionSupport(){
@@ -28,6 +30,16 @@ class HomeController extends Controller
 			throw new CHttpException(404,'The requested Category does not exist.');
 		return $model;
 	}
+
+	function getCategories(){
+		if(!isset($this->_categories)){
+			$this->_categories =Entry::model()->with('entries')->findAllBySql('select * from entry where parent_id is null and active = 1 order by `index` asc, id asc');
+		}
+
+		return $this->_categories;
+	}
+
+
 }
 
 ?>

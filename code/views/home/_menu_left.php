@@ -4,7 +4,7 @@
 	$cs->registerScriptFile('/static/treemenu/jquery.treeview.js');
 	$cs->registerScriptFile('/static/treemenu/jquery.cookie.js');
 	$cs->registerCssFile('/css/jquery.treeview.css');
-
+	
 	$currentId = $entry->id;
 	$ids[] = $entry->id;
 	$p = $entry->parent;
@@ -18,7 +18,7 @@
 		<span><a href="#" class="main-left-theo-doi-a">LookupVietNam.vn đã tích hợp Bảo Kim</a></span>
 	</div>
 	<div class="main-left-content">
-<ul id="navigation">
+<ul id="navigation" style="display: none;">
 	<?php foreach($categories as $category):?>
 		<li>
 			<a class=" <?php if(in_array($category->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',array('url_key'=>$category->url_key)) ?>"><?php echo $category->title;?></a>
