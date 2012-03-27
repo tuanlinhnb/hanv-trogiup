@@ -34,7 +34,7 @@
 							<?php foreach($entries->entries as $entry_l3):
 							?>
 							<li class="">
-								<a class=" <?php if(in_array($entries->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',array('url_key'=>$entry_l3->url_key))?>"><?php echo $entry_l3->title ?></a>
+								<a class=" <?php if(in_array($entry_l3->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',array('url_key'=>$entry_l3->url_key))?>"><?php echo $entry_l3->title ?></a>
 
 								<?php  if(!empty($entry_l3->entries)): ?>
 								<ul class="">

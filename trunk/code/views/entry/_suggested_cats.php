@@ -26,7 +26,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 				$path = array();
 				while (!empty($pid)) {
 					$parent = Entry::model()->findByPk($pid);
-					$path[]=$parent;
+					$path = array_merge(array($parent),$path);
 					$pid = $parent->parent_id;
 				};
 				foreach ($path as $e) {

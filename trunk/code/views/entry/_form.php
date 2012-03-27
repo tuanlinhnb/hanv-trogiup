@@ -16,14 +16,20 @@
 		<b>Parent category</b> (<a href='#' onclick="jQuery('#divSuggestedCat').toggle('slow'); return false;"><em>Change</em></a>) <br>
 		<p class="note" id="divParentInfo">
 			<?php if ($parentModel) {?>
-
 			Root &nbsp;&raquo;&nbsp;
 			<?php
-				foreach ($parentModel->path as $e) {
-					echo CHtml::link($e->name, $this->createUrl('view', array('id'=>$e->id)));
-					echo '&nbsp;&raquo;&nbsp';
+               $pid = $parentModel->id;
+               $path = array();
+				while (!empty($pid)) {
+					$parent = Entry::model()->findByPk($pid);
+					$path = array_merge(array($parent),$path);
+					$pid = $parent->parent_id;
+				};
+				foreach ($path as $e) {
+					echo CHtml::link($e->title, Yii::app()->controller->createUrl("view",array("id"=>$e->id)));
+					echo '&nbsp;&raquo;&nbsp;';
 				}
-				echo CHtml::link($parentModel->title, $this->createUrl('view', array('id'=>$parentModel->id)));
+
 			?>
 			<?php } else { ?>
 			This is root category.

@@ -8,7 +8,7 @@ class HomeController extends Controller
 
 		$url_key = isset($_GET['url_key'])?$_GET['url_key']:null;
 		if(empty($url_key)){
-			$entryModel = Entry::model()->findBySql('select * from entry where parent_id is null and active = 1 and default_home = 1');
+			$entryModel = Entry::model()->findBySql('select * from entry where parent_id is null and active = 1 and default_home = 1 order by `index` asc');
 			if(empty($entryModel)) $entryModel = Entry::model()->findBySql('select * from entry where parent_id is null and active = 1');
 		}
 		else $entryModel = $this->loadEntryModelByUrlKey($url_key);
