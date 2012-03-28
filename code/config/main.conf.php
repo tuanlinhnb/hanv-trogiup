@@ -61,7 +61,7 @@ $cfg = array(
 			'defaultRoles'=>array('owner'),
 		),
 		'cache'=>array(
-			'class' => 'CFileCache',
+//			'class' => 'CFileCache',
 			'class' => 'CDummyCache',
 		),
 	),
