@@ -36,12 +36,19 @@ $cfg = array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
-			'rules'=>array(
-				'<_c:\w+>/'=>'<_c>/',
-				'<_c:\w+>/<_a:\w+>'=>'<_c>/<_a>',
-				'<_m:\w+>/<_c:\w+>/<_a:\w+>'=>'<_m>/<_c>/<_a>',
+	//		'rules'=>array(
+//				'url_key/'
+//				'<_c:\w+>/'=>'<_c>/',
+//				'<_c:\w+>/<_a:\w+>'=>'<_c>/<_a>',
+//				'<_m:\w+>/<_c:\w+>/<_a:\w+>'=>'<_m>/<_c>/<_a>',
+//			),
+			'rules'		=>	array(
+//				'index/<_key:\w+>'=>'/<_url_key>',
+//              index/url_key/tong_quan_ve_bao_kim
+//			    'posts'=>'post/list',
+			    '/ho_tro/<url_key:\w+>'=>'home/index',
+//			    'post/<year:\d{4}>/<title>'=>'post/read',
 			),
-			'showScriptName'=>false,
 		),
 
 		'assetManager'	=>	array(

@@ -4,7 +4,7 @@ class HomeController extends Controller
 {
 	private $_categories;
 
-	function actionIndex()
+	function actionIndex($url_key = null)
 	{
 //		$categories = Entry::model()->with('entries')->findAllBySql('select * from entry where parent_id is null and active = 1 order by `index` asc, id asc');
 
