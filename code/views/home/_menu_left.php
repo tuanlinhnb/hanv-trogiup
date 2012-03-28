@@ -4,7 +4,7 @@
 	$cs->registerScriptFile('/static/treemenu/jquery.treeview.js');
 	$cs->registerScriptFile('/static/treemenu/jquery.cookie.js');
 	$cs->registerCssFile('/css/jquery.treeview.css');
-	
+
 	$currentId = $entry->id;
 	$ids[] = $entry->id;
 	$p = $entry->parent;
@@ -61,3 +61,8 @@
 </ul>
 </div>
 </div>
+<script language="JavaScript">
+	jQuery(function($) {
+	$('#navigation').css('display','block');
+});
+</script>

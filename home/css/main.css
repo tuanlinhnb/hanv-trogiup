@@ -7,7 +7,7 @@ body
 	margin: 0;
 	padding: 0;
 	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
+	font: normal 10pt Tahoma,Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
 }
 ul{
@@ -221,7 +221,7 @@ div.search-form
 
 .operations li a
 {
-	font: bold 12px Arial;
+	font: bold 12px Tahoma, Arial;
 	color: #0066A4;
 	display: block;
 	padding: 2px 0 2px 8px;
@@ -492,7 +492,7 @@ span.separator {
 }
 #LgArticle {
     float: left;
-    font-family: Arial,Helvetica,sans-serif;
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
     font-size: 12px;
     margin-top: 14px;
     padding-left: 15px;
