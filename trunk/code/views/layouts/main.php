@@ -39,9 +39,9 @@
 		            <li><a href="https://www.baokim.vn/news">Tin tức</a></li>
 		            <li><a href="https://www.baokim.vn/faq">Trợ giúp</a></li>
 					<!--<li><a  class="logged-head" href="#">datbt@baokim.vn</a></li> -->
-					<li style="float:right;padding-top:0"><a href="https://www.baokim.vn/accounts/register">Đăng ký</a></li>
-					<li style="float:right;padding-top:0;margin-top:2px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/baokim_tichhopthanhtoan_03.jpg"></li>
-					<li style="float:right;padding-top:0"><a href="https://www.baokim.vn/accounts/login">Đăng nhập</a></li>
+					<li style="float:right;"><a href="https://www.baokim.vn/accounts/register">Đăng ký</a></li>
+					<li style="float:right;margin-top:2px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/baokim_tichhopthanhtoan_03.jpg"></li>
+					<li style="float:right;"><a href="https://www.baokim.vn/accounts/login">Đăng nhập</a></li>
 
 		        </ul>
         </div>
