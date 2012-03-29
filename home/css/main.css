@@ -261,9 +261,9 @@ div.search-form
     text-decoration: none;
 }
 .menu-content li{
-	  float: left;
-    line-height: 17px;
-    padding-top: 4px;
+	float: left;
+	line-height: 17px;
+	padding-top: 4px;
 }
 .menu-content li:hover {
     background: url("images/baokim_tichhopthanhtoan_51.jpg") repeat-x scroll 0 0 transparent;
@@ -281,9 +281,11 @@ div.search-form
     margin-top: 0;
 }
 .menu-content ul{
-	  margin: 0 auto;
-    text-align: center;
-    width: 709px;
+	float: left;
+	margin: 0 auto;
+	padding-left: 271px;
+	text-align: center;
+	width: 714px;
 }
 #Header-back-full {
     background: url("images/header_back_04.jpg") repeat-x scroll 0 0 transparent;
