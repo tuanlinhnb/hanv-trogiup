@@ -44,7 +44,20 @@
 	<div class="boxLeft">
 		<div id="LgArticle">
 			<div class="main-right-home">
-				<?php echo $entry->content; ?>
+
+			 <?php
+	if ($this->beginCache('conten_right_'.$entry->id, array(
+	'duration'	=>	24*3600,
+	'dependency'=>	array(
+		'class'	=>	'CDbCacheDependency',
+		'sql'	=>	'SELECT last_updated_time FROM entry where id = '.$entry->id,
+	)
+	))) {
+		echo $entry->content;
+		$this->endCache();
+	}
+
+?>
 			</div>
 		</div>
 	</div>
