@@ -21,27 +21,27 @@
 <ul id="navigation" style="display: none;">
 	<?php foreach($categories as $category):?>
 		<li>
-			<a class=" <?php if(in_array($category->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',array('url_key'=>$category->url_key)) ?>"><?php echo $category->title;?></a>
+			<a class=" <?php if(in_array($category->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',$category->url_path) ?>"><?php echo $category->title;?></a>
 			<?php if(!empty($category->entries)): ?>
 				<ul class="">
 				<?php foreach($category->entries as $entries):
 				?>
 				<li>
-					<a class=" <?php if(in_array($entries->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',array('url_key'=>$entries->url_key))?>"><?php echo $entries->title ?></a>
+					<a class=" <?php if(in_array($entries->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',$entries->url_path)?>"><?php echo $entries->title ?></a>
 
 					<?php  if(!empty($entries->entries)): ?>
 						<ul class="">
 							<?php foreach($entries->entries as $entry_l3):
 							?>
 							<li class="">
-								<a class=" <?php if(in_array($entry_l3->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',array('url_key'=>$entry_l3->url_key))?>"><?php echo $entry_l3->title ?></a>
+								<a class=" <?php if(in_array($entry_l3->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',$entry_l3->url_path)?>"><?php echo $entry_l3->title ?></a>
 
 								<?php  if(!empty($entry_l3->entries)): ?>
 								<ul class="">
 									<?php foreach($entry_l3->entries as $entry_l4):
 									?>
 									<li class="">
-										<a class=" <?php if(in_array($entry_l4->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',array('url_key'=>$entry_l4->url_key))?>"><?php echo $entry_l4->title ?></a>
+										<a class=" <?php if(in_array($entry_l4->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',$entry_l4->url_path)?>"><?php echo $entry_l4->title ?></a>
 									</li>
 									<?php endforeach;?>
 								</ul>

@@ -14,6 +14,9 @@ class HomeController extends Controller
 			if(empty($entryModel)) $entryModel = Entry::model()->findBySql('select * from entry where parent_id is null and active = 1');
 		}
 		else $entryModel = $this->loadEntryModelByUrlKey($url_key);
+
+		header('ETag: '.$entryModel->last_updated_time);
+
 		$this->render('index',array('entry'=>$entryModel));
 	}
 
@@ -33,13 +36,11 @@ class HomeController extends Controller
 
 	function getCategories(){
 		if(!isset($this->_categories)){
-			$this->_categories =Entry::model()->with('entries')->findAllBySql('select * from entry where parent_id is null and active = 1 order by `index` asc, id asc');
+			$this->_categories = Entry::model()->with('entries')->findAllBySql('select * from entry where parent_id is null and active = 1 order by `index` asc, id asc');
 		}
 
 		return $this->_categories;
 	}
-
-
 }
 
 ?>

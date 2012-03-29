@@ -1,3 +1,9 @@
+<?php
+	if ($this->beginCache('dialog_support', array(
+	'duration'	=>	24*3600,
+	))) {
+		?>
+
 <style type="text/css" charset="utf-8">
 
 #Page-wide {
@@ -113,3 +119,9 @@
 
     </div>
 </div>
+
+	<?php
+		$this->endCache();
+	}
+
+?>

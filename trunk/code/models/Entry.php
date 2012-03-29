@@ -27,6 +27,7 @@ class Entry extends CActiveRecord
 	 * @return Entry the static model class
 	 */
 	private $_path = array();
+	private $_url_path = '';
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -77,6 +78,22 @@ class Entry extends CActiveRecord
 			$this->_path = $path;
 		}
 		return $this->_path;
+	}
+
+	public function getUrl_path()
+	{
+//			$url = $this->url_key;
+			$url = array('url_key'=>$this->url_key);
+			$p = $this->parent;
+			$i = 1;
+			while (!empty($p)) {
+                $url['url_key_p_'.$i] = $p->url_key;
+				$p = $p->parent;
+				$i++;
+				}
+			$url  = array_reverse($url);
+			$this->_url_path = $url;
+		return $this->_url_path;
 	}
 
 	/**
