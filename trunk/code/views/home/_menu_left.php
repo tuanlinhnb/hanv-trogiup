@@ -19,6 +19,12 @@
 	</div>
 	<div class="main-left-content">
 <ul id="navigation" style="display: none;">
+<script language="JavaScript">
+	jQuery(function($) {
+	$('#navigation').css('display','block');
+});
+</script>
+
 	<?php foreach($categories as $category):?>
 		<li>
 			<a class=" <?php if(in_array($category->id,$ids)) echo 'active1';?>" href="<?php echo $this->createUrl('index',$category->url_path) ?>"><?php echo $category->title;?></a>
@@ -61,8 +67,3 @@
 </ul>
 </div>
 </div>
-<script language="JavaScript">
-	jQuery(function($) {
-	$('#navigation').css('display','block');
-});
-</script>
