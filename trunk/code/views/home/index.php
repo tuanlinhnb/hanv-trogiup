@@ -1,3 +1,4 @@
+ádfsdf
 <?php
 	$this->breadcrumbs = array();
 	$p = $entry->parent;
