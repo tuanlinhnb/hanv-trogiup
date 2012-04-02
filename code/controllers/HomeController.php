@@ -14,13 +14,21 @@ class HomeController extends Controller
 			if(empty($entryModel)) $entryModel = Entry::model()->findBySql('select * from entry where parent_id is null and active = 1');
 		}
 		else $entryModel = $this->loadEntryModelByUrlKey($url_key);
-
+        header('Cache-Control: max-age=60, public, proxy-revalidate');
 		header('ETag: '.$entryModel->last_updated_time);
-
+		header('If-Modified-Since: '.$entryModel->last_updated_time);
+		if(!empty($_SERVER['HTTP_IF_NONE_MATCH']) && $_SERVER['HTTP_IF_NONE_MATCH'] == $entryModel->last_updated_time){
+			header("HTTP/1.0 304 Not Modified");
+		}
 		$this->render('index',array('entry'=>$entryModel));
 	}
 
 	public function actionSupport(){
+		header('ETag: '.$entryModel->last_updated_time);
+		header('Cache-Control: max-age=300, public, proxy-revalidate');
+		if(!empty($_SERVER['HTTP_IF_NONE_MATCH'])){
+			header("HTTP/1.0 304 Not Modified");
+		}
 		$this->renderPartial('support');
 	}
 
@@ -44,3 +52,38 @@ class HomeController extends Controller
 }
 
 ?>
+
+
+
+<?php
+
+//	function setLastModified($last_modified=NULL)
+// {
+//     $page_modified=getlastmod();
+
+//     if(empty($last_modified) || ($last_modified < $page_modified))
+//     {
+//         $last_modified=$page_modified;
+//     }
+//     $header_modified=filemtime(__FILE__); // th?i này cu?i cùng file này b? thay d?i
+//     if($header_modified > $last_modified)
+//     {
+//         $last_modified=$header_modified;
+//     }
+//     header('Last-Modified: ' . date("r",$last_modified));
+//     return $last_modified;
+// }
+
+// function exitIfNotModifiedSince($last_modified)
+// {
+//     if(array_key_exists("HTTP_IF_MODIFIED_SINCE",$_SERVER))
+//     {
+//         $if_modified_since=strtotime(preg_replace('/;.*$/','',$_SERVER["HTTP_IF_MODIFIED_SINCE"]));
+//         if($if_modified_since >= $last_modified)
+//         {
+//             header("HTTP/1.0 304 Not Modified");
+//             exit();
+//         }
+//     }
+// }
+ ?>
