@@ -122,7 +122,7 @@ jQuery(function($) {
 });
 //-->
 
-  CKEDITOR.replace( 'Entry[content]',
+CKEDITOR.replace( 'Entry[content]',
 {
 	filebrowserBrowseUrl : '/static/ckeditor/ckfinder/ckfinder.html',
 	filebrowserImageBrowseUrl : '/static/ckeditor/ckfinder/ckfinder.html?type=Images',
