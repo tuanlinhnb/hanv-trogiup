@@ -1,0 +1,502 @@
+*{
+	margin:0;
+	padding:0;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #555;
+	font: normal 10pt Tahoma,Arial,Helvetica,sans-serif;
+	background: #EFEFEF;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+li{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+#page
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background: white;
+}
+
+#header
+{
+	margin: 0;
+	padding: 0;
+}
+
+#content
+{
+}
+
+#sidebar
+{
+	padding: 20px 20px 20px 0;
+}
+
+#footer
+{
+	padding: 10px;
+	margin: 10px 20px;
+	font-size: 0.8em;
+	text-align: center;
+	border-top: 1px solid #C9E0ED;
+}
+
+#logo
+{
+	padding: 10px 20px;
+	font-size: 200%;
+}
+
+#mainmenu
+{
+	background:white url(bg.gif) repeat-x left top;
+}
+
+#mainmenu ul
+{
+	padding:6px 20px 5px 20px;
+	margin:0px;
+}
+
+#mainmenu ul li
+{
+	display: inline;
+}
+
+#mainmenu ul li a
+{
+	color:#ffffff;
+	background-color:transparent;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+	padding:5px 8px;
+}
+
+#mainmenu ul li a:hover, #mainmenu ul li.active a
+{
+	color: #6399cd;
+	background-color:#EFF4FA;
+	text-decoration:none;
+}
+
+div.flash-error, div.flash-notice, div.flash-success
+{
+	padding:.8em;
+	margin-bottom:1em;
+	border:2px solid #ddd;
+}
+
+div.flash-error
+{
+	background:#FBE3E4;
+	color:#8a1f11;
+	border-color:#FBC2C4;
+}
+
+div.flash-notice
+{
+	background:#FFF6BF;
+	color:#514721;
+	border-color:#FFD324;
+}
+
+div.flash-success
+{
+	background:#E6EFC2;
+	color:#264409;
+	border-color:#C6D880;
+}
+
+div.flash-error a
+{
+	color:#8a1f11;
+}
+
+div.flash-notice a
+{
+	color:#514721;
+}
+
+div.flash-success a
+{
+	color:#264409;
+}
+
+div.form .rememberMe label
+{
+	display: inline;
+}
+
+div.view
+{
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #C9E0ED;
+}
+
+div.breadcrumbs
+{
+    float: left;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+div.breadcrumbs span
+{
+	font-weight: bold;
+}
+
+div.search-form
+{
+	padding: 10px;
+	margin: 10px 0;
+	background: #eee;
+}
+
+.portlet
+{
+
+}
+
+.portlet-decoration
+{
+	padding: 3px 8px;
+	background: #B7D6E7;
+	border-left: 5px solid #6FACCF;
+}
+
+.portlet-title
+{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	color: #298dcd;
+}
+
+.portlet-content
+{
+	font-size:0.9em;
+	margin: 0 0 15px 0;
+	padding: 5px 8px;
+	background:#EFFDFF;
+}
+
+.portlet-content ul
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
+
+.portlet-content li
+{
+	padding: 2px 0 4px 0px;
+}
+
+.operations
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.operations li
+{
+	padding-bottom: 2px;
+}
+
+.operations li a
+{
+	font: bold 12px Tahoma, Arial;
+	color: #0066A4;
+	display: block;
+	padding: 2px 0 2px 8px;
+	line-height: 15px;
+	text-decoration: none;
+}
+
+.operations li a:visited
+{
+	color: #0066A4;
+}
+
+.operations li a:hover
+{
+	background: #80CFFF;
+}
+.pager ul.yiiPager .first,
+.pager ul.yiiPager .last
+{
+	display:inline;
+}
+#Menu {
+    background: url("images/back_hotro_01.jpg") repeat-x scroll 0 0 transparent;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+}
+#Menu li{
+	display: inline;
+}
+.menu-content li a {
+    color: #FFFFFF;
+    font-family: Tahoma,Geneva,sans-serif;
+    margin-top: 0;
+    padding-left: 10.5px;
+    padding-right: 10.5px;
+    text-decoration: none;
+}
+.menu-content li{
+	float: left;
+	line-height: 17px;
+	padding-top: 4px;
+}
+.menu-content li:hover {
+    background: url("images/baokim_tichhopthanhtoan_51.jpg") repeat-x scroll 0 0 transparent;
+    margin-top: 0;
+}
+.menu-content li:active {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #F2F8FA !important;
+    background-image: url("images/baokim_tichhopthanhtoan_51.jpg");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    background-size: auto auto;
+    margin-top: 0;
+}
+.menu-content ul{
+	float: left;
+	margin: 0 auto;
+	padding-left: 271px;
+	text-align: center;
+	width: 714px;
+}
+#Header-back-full {
+    background: url("images/header_back_04.jpg") repeat-x scroll 0 0 transparent;
+    height: 92px;
+}
+.logo {
+    background: url("images/logo.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 50px;
+    margin-left: 50px;
+    margin-top: 24px;
+    width: 190px;
+}
+#Page-wide {
+	margin:0 auto;
+    width: 990px;
+}
+.quang-cao {
+    float: left;
+    margin-left: 62px;
+    margin-top: 16px;
+}
+.icon-header {
+    float: right;
+    margin-bottom: 9px;
+    margin-right: 87px;
+    margin-top: 14px;
+}
+#Header .icon-header img {
+    height: 20px;
+    padding-left: 5px;
+    width: 20px;
+}
+#Header img {
+    border: medium none;
+}
+.ho-tro {
+    float: right;
+    height: 23px;
+    margin-right: 15px;
+    width: 150px;
+}
+#Footer-back {
+    background: none repeat scroll 0 0 #F4F4F4;
+    border-top: 2px solid #F1F1F1;
+    clear: both;
+    height: 80px;
+    margin-top: 12px;
+    width: 100%;
+}
+#Footer-khung {
+    margin-left: auto;
+    margin-right: auto;
+    width: 992px;
+}
+#Footer {
+    background: none repeat scroll 0 0 #F4F4F4;
+    color: #999999;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 11px;
+    height: 80px;
+    line-height: 22px;
+    margin-left: 16px;
+}
+.footer-left {
+    float: left;
+    padding-top: 8px;
+}
+.footer-right {
+    float: right;
+    margin-right: 154px;
+    padding-top: 8px;
+}
+#main{
+	width:1000px;
+	margin:0 auto;
+}
+.menu-footer-ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 228.5px;
+}
+.menu-footer-ul li {
+    float: left;
+}
+.menu-footer-ul a {
+    color: #006C9A;
+    font-family: Tahoma,Geneva,sans-serif;
+    padding-left: 10.5px;
+    padding-right: 10.5px;
+    text-decoration: none;
+}
+.menu-footer {
+   border-top: 2px solid #76B143;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    margin: 20px auto auto;
+    width: 960px;
+}
+.menu-footer-ul a:hover {
+    color: #76B143;
+    font-family: Tahoma,Geneva,sans-serif;
+    padding-left: 10.5px;
+    padding-right: 10.5px;
+    text-decoration: none;
+}
+.main-content{
+	width:990px;
+	margin:0 auto;
+}
+.main-left-theo-doi {
+    border-bottom: 1px dashed #999999;
+    color: #76B143;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+.main-left-theo-doi-a {
+    color: #76B143;
+    font-family: Tahoma,Geneva,sans-serif;
+    margin-left: 24px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.main-left {
+    float: left;
+    font-family: Tahoma,Geneva,sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    width: 250px;
+}
+.main-left-content {
+    color: #006C9A;
+    font-size: 12px;
+    margin-left: 6px;
+    margin-top: 12px;
+}
+.ul-menu {
+    line-height: 22px;
+    list-style-type: none;
+    padding-left: 0;
+}
+.ul-menu {
+    line-height: 22px;
+    list-style-type: none;
+}
+.menu_1 {
+    background: url("images/allStar.png") no-repeat scroll -9px 1px transparent;
+    color: #006C9A !important;
+    padding-left: 18px;
+    text-decoration: none;
+}
+.ul-menu {
+    line-height: 22px;
+    list-style-type: none;
+    padding-left: 0;
+}
+.menu_2 {
+    background: url("images/allStar.png") no-repeat scroll -9px -46px transparent;
+    color: #006C9A !important;
+    margin-left: 21px;
+    padding-left: 17px;
+    text-decoration: none;
+}
+.main-right {
+    border-left: 1px solid #E3E8EA;
+    float: left;
+    margin-top: 15px;
+    min-height: 403px;
+    width: 696px;
+}
+.line-link {
+	color: #006C9A;
+    float: left;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 12px;
+    line-height: 13px;
+    margin-left: 15px;
+    width: 681px;
+}
+.menu_3 {
+    background: url("images/allStar.png") no-repeat scroll -12px -32px transparent;
+    color: #006C9A !important;
+    margin-left: 46px;
+    padding-left: 8px;
+    text-decoration: none;
+}
+.active1 {
+	font-weight: bold;
+}
+span.separator {
+    background: url("images/baokim_tichhopthanhtoan_25.jpg") no-repeat scroll transparent;
+    float: left;
+    height: 11px;
+    margin: 5px 6px;
+    width: 6px;
+}
+.breadcrumbs a{
+	float:left;
+	text-decoration: none;
+	font-family: Tahoma,Geneva,sans-serif;
+    font-size: 12px;
+    line-height: 13px;
+}
+#LgArticle {
+    float: left;
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin-top: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
